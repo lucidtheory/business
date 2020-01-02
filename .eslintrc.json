@@ -1,0 +1,53 @@
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "plugins": [
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "curly": ["error", "all"],
+    "global-require": "off",
+    "import/extensions": ["warn", "never", {
+      "svg": "always"
+    }],
+    "import/no-cycle": "error",
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true,
+      "optionalDependencies": false,
+      "peerDependencies": false
+    }],
+    "import/prefer-default-export": "off",
+    "max-len": ["error", 160, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "no-console": ["error"],
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": ["self"]
+    }],
+    "no-underscore-dangle": ["error", {
+      "allowAfterThis": true
+    }],
+    "object-curly-newline": "off",
+    "semi": ["error", "never"]
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "env": {
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["scripts"],
+        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+      }
+    }
+  }
+}
