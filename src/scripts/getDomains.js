@@ -30,7 +30,7 @@ const getDomains = () => {
   })
 
   sorted.forEach((domain) => {
-    fs.appendFileSync('scripts/fba/domains.js', `"${domain} ${domainMap[longestRoot(domain)]}",\n`)
+    fs.appendFileSync('scripts/domains.js', `"${domain} ${domainMap[longestRoot(domain)]}",\n`)
   })
 }
 

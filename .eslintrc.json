@@ -30,6 +30,7 @@
       "props": true,
       "ignorePropertyModificationsFor": ["self"]
     }],
+    "no-tabs": "off",
     "no-underscore-dangle": ["error", {
       "allowAfterThis": true
     }],

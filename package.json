@@ -7,7 +7,7 @@
     "request": "^2.88.0"
   },
   "scripts": {
-    "lint": "eslint scripts --fix"
+    "lint": "eslint src --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
