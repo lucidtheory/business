@@ -1,8 +1,9 @@
 const fs = require('fs')
-const brands = require('src/lists/Brands.js')
-const leadsOnLocation = require('src/lists/LeadsOnLocation.js')
-const oaHunt = require('src/lists/OAHunt.js')
-const resellingTeacher = require('src/lists/ResellingTeacher.js')
+const brands = require('../lists/Brands.js')
+// const leadsOnLocation = require('../lists/LeadsOnLocation.js')
+// const oaHunt = require('../lists/OAHunt.js')
+// const resellingTeacher = require('../lists/ResellingTeacher.js')
+const onLocationTre = require('../lists/OnLocationTre.js')
 
 const findTopUsedBrands = () => {
   const results = {}
@@ -19,9 +20,10 @@ const findTopUsedBrands = () => {
     }
 
     // iterate through each list and count occurences of brand
-    leadsOnLocation.forEach(addToBrandCount)
-    oaHunt.forEach(addToBrandCount)
-    resellingTeacher.forEach(addToBrandCount)
+    // leadsOnLocation.forEach(addToBrandCount)
+    // oaHunt.forEach(addToBrandCount)
+    // resellingTeacher.forEach(addToBrandCount)
+    onLocationTre.forEach(addToBrandCount)
   })
 
   brands.sort((a, b) => (results[b] || 0) - (results[a] || 0)).forEach(brand => {
